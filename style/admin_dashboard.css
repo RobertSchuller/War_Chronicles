@@ -1,0 +1,394 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: linear-gradient(19deg, #F8F4E1 0%, #AF8F6F 100%);
+  color: #474544;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #74512D;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #F8F4E1;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: #F8F4E1;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #F8F4E1;
+  color: #74512D;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #F8F4E1;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Admin Dashboard Styles */
+.profile-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Increased width for the admin dashboard */
+  margin: 50px auto;
+  padding: 20px;
+  width: calc(100% - 40px); /* Ensure container is responsive */
+}
+
+.profile-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #74512D;
+  text-align: center;
+}
+
+/* Message Styles */
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.message.success {
+  color: #4caf50;
+  background-color: #e6ffe6;
+  border: 1px solid #4caf50;
+}
+
+.message.error {
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+}
+
+.stats, .user-management, .question-management, .user-list, .edit-user-container {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats h3, .user-management h3, .question-management h3, .user-list h3, .edit-user-container h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #74512D;
+  text-align: center;
+}
+
+.stats p, .user-management p, .question-management p, .edit-user-container p {
+  font-size: 16px;
+  color: #333;
+}
+
+.user-management form, .question-management form, .edit-user-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-management label, .question-management label, .edit-user-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #74512D;
+}
+
+.user-management input, .user-management button, .question-management input, .question-management button, .edit-user-container input, .edit-user-container button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #AF8F6F;
+  border-radius: 5px;
+}
+
+.user-management button, .question-management button, .edit-user-container button {
+  background-color: #74512D;
+  color: white;
+  cursor: pointer;
+}
+
+.user-management button:hover, .question-management button:hover, .edit-user-container button:hover {
+  background-color: #AF8F6F;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-list th, .user-list td {
+  padding: 10px;
+  border: 1px solid #AF8F6F;
+  text-align: left;
+}
+
+.user-list th {
+  background-color: #74512D;
+  color: white;
+}
+
+.user-list td form {
+  display: inline;
+}
+
+.user-list td button {
+  background-color: #74512D;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.user-list td button:hover {
+  background-color: #AF8F6F;
+}
+
+.user-list td {
+  white-space: nowrap;
+}
+
+.user-list tr td:first-child, .user-list tr th:first-child {
+  text-align: center;
+}
+
+.user-list tr td:last-child, .user-list tr th:last-child {
+  text-align: center;
+}
+
+/* Centering the Buttons and Headers */
+.user-management, .question-management {
+  text-align: center;
+}
+
+.user-management button, .question-management button {
+  margin: 0 auto;
+}
+
+.user-management form, .question-management form {
+  align-items: center;
+}
+
+/* Chart Container Styles */
+.chart-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.chart-container h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #74512D;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  max-width: 600px;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+/* Edit User Form Styles */
+.edit-user-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.edit-user-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #74512D;
+  text-align: center;
+}
+
+.edit-user-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-user-container label {
+  font-weight: bold;
+  color: #74512D;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.edit-user-container input[type="text"],
+.edit-user-container input[type="email"],
+.edit-user-container input[type="password"],
+.edit-user-container input[type="checkbox"] {
+  padding: 12px;
+  border: 1px solid #AF8F6F;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.edit-user-container input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.edit-user-container input:focus {
+  border-color: #74512D;
+  outline: none;
+}
+
+.edit-user-container button {
+  background-color: #74512D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-user-container button:hover {
+  background-color: #AF8F6F;
+}
+
+.edit-user-container .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    background-color: #74512D;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .profile-container {
+    margin: 20px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .stats, .user-management, .question-management, .user-list, .chart-container, .edit-user-container {
+    margin: 20px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .user-list table, .user-list th, .user-list td {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .user-list th, .user-list td {
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #AF8F6F;
+  }
+
+  .user-list td form {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .user-list td button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

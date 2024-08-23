@@ -1,0 +1,234 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|PT+Serif:400,700');
+
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: linear-gradient(19deg, #F8F4E1 0%, #AF8F6F 100%);
+  color: #474544;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #74512D;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Ensure the nav is above other elements */
+}
+  
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F8F4E1;
+    text-decoration: none;
+}
+  
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+  
+.nav-links li {
+    margin-right: 20px;
+}
+  
+.nav-links li:last-child {
+    margin-right: 0;
+}
+  
+.nav-links a {
+    color: #F8F4E1;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+.nav-links a:hover {
+    background-color: #F8F4E1;
+    color: #74512D;
+}
+  
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+  
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #F8F4E1;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Victims Section Styles */
+.victims-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.victims-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.victims-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.victim-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.victim-card:hover {
+    transform: translateY(-10px);
+}
+
+.victim-card img {
+    height: 270px;
+    width: 100%;
+}
+
+.victim-info {
+    padding: 20px;
+}
+
+.victim-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.victim-info p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Statistics Section Styles */
+.statistics {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border: 2px solid #74512d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.statistics h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #74512d;
+    text-align: center;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.statistics-grid p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.statistics-grid p:hover {
+    transform: translateY(-5px);
+}
+
+.statistics-grid i {
+    color: #74512d;
+    font-size: 1.5em;
+}
+
+.statistics-grid strong {
+    flex: 1; /* Ensure the strong element takes up the remaining space */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 53px; /* Adjusted to ensure it's below the header */
+        left: 0;
+        background-color: #74512D;
+        padding: 10px 0;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+  
+    .logo {
+        font-size: 20px;
+    }
+  
+    nav {
+        padding: 10px;
+    }
+  
+    .burger {
+        display: flex;
+    }
+
+    .victims-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .victim-card {
+        max-width: 100%;
+    }
+
+    .statistics {
+        padding: 20px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+}
